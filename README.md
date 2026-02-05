@@ -1,4 +1,5 @@
-This project demonstrates how to work with routing in React
+This project demonstrates how to work with routing in React. 
+User can switch theme by pressing button.
 
 Technologies 
 

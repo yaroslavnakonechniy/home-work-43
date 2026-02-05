@@ -42,7 +42,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: hsl(40, 97%, 50%);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -52,6 +52,17 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.theme-green {
+  --primary-color: rgb(0, 128, 0);
+  --background-color: rgb(176, 241, 189);
+}
+
+.theme-orange {
+  --primary-color: hsl(40, 97%, 50%);
+  --background-color: rgb(247, 226, 152);
+  
 }
 
 @media (prefers-color-scheme: light) {

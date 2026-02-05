@@ -1,8 +1,22 @@
 .active {
   font-weight: bold;
-  color: red;
+  color: var(--primary-color);
 }
 
 .pending {
   color: gray;
+}
+
+.navigation {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background: var(--background-color);
+}
+
+.btn{
+  border-radius: 5px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--background-color);
 }

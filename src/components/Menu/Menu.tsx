@@ -23,30 +23,32 @@ export const Menu = () => {
     }
     return (
         <>
-            <NavLink 
-                    to="/"   
+            <div className={styles.navigation} >
+                <NavLink 
+                        to="/"   
+                        className={getLinkClass}
+                >Go to Home</NavLink>
+                |
+                <NavLink 
+                    to="/about"   
                     className={getLinkClass}
-            >Go to Home</NavLink>
-            |
-            <NavLink 
-                to="/about"   
-                className={getLinkClass}
-            >Go to About</NavLink>
-            |
-            <NavLink 
-                to="/contact"   
-                className={getLinkClass}
-            >Go to Contact</NavLink>
-                        |
-            <NavLink 
-                to="/posts"   
-                className={getLinkClass}
-            >Go to Posts</NavLink>
-            |
-            {authService.isAuth() 
-                &&
-                <button onClick={handleLogout}>Loguot</button>
-            }
+                >Go to About</NavLink>
+                |
+                <NavLink 
+                    to="/contact"   
+                    className={getLinkClass}
+                >Go to Contact</NavLink>
+                            |
+                <NavLink 
+                    to="/posts"   
+                    className={getLinkClass}
+                >Go to Posts</NavLink>
+                |
+                {authService.isAuth() 
+                    &&
+                    <button onClick={handleLogout} className={styles.btn}>Loguot</button>
+                }
+            </div>
         </>
     )
 }
