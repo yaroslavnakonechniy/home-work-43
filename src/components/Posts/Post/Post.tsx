@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getPost } from "../../../services/posts";
 import { useState } from "react";
+import styles from './post.module.css'
 
 export const Post = () => {
 
@@ -30,7 +31,7 @@ export const Post = () => {
         <>
             <hr />
             <hr />
-            <li key={post.id}>
+            <li key={post.id} className={styles.post}>
                 <h4>{post.title}</h4>
                 <h5>{post.body}</h5>
                 <h5>{post.userId}</h5>
