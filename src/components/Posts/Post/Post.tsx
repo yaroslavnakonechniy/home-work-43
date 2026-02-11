@@ -1,27 +1,9 @@
-import type { PostData } from "./PostData"
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getPost } from "../../../services/posts";
-import { useState } from "react";
+// я не зрозумів чому ми не отримуємо 1пост через useEffect як ми отримували пости ???
 import styles from './post.module.css'
+import { useAppSelector } from "../../../store/hooks"
 
 export const Post = () => {
-
-    const {postId} = useParams();
-    const [post, setPost] = useState<PostData | null>(null);
-
-    useEffect(() => {
-
-        const id = Number(postId);
-
-        if (postId === null) return;
-        const fetchData = async() => {
-            setPost(await getPost(id));
-        }
-        
-        fetchData();
-
-    }, [postId]);
+    const post = useAppSelector(state => state.posts.selectedById)
 
     if (!post) {
         return <div>Оберіть пост</div>
